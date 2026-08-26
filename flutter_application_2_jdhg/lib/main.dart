@@ -1,9 +1,3 @@
-// ============================================================
-// PaseosCaninos - App de presentación de un emprendimiento
-// Actividad Integradora 2 - Mi Primera Aplicación en Flutter
-// Realizado por: JORGE DAVID HERRERA GALAN
-// ============================================================
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
