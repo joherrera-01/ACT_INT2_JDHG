@@ -37,7 +37,7 @@ Esta aplicación representa la pantalla principal para el rol de **Cliente (Due�
 
 ## 📌 Repositorio publicado en GitHub
 
-https://github.com/joherrera-01/ACT_INT1_JDHG.git
+https://github.com/joherrera-01/ACT_INT2_JDHG.git
 
 
 ## ⚡ Capturas de la aplicación:
