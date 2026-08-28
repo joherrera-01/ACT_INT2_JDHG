@@ -10,7 +10,7 @@ class PaseosDatosBase {
       telefono: '+593987654321',
       experiencia: '3 años cuidando razas grandes y enérgicas.',
       calificacion: 4.9,
-      fotoUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb',
+      fotoUrl: 'https://reqres.in/img/faces/1-image.jpg', // URL Directa
       especialidades: ['Razas Grandes', 'Entrenamiento Básico'],
     ),
     Paseador(
@@ -20,7 +20,7 @@ class PaseosDatosBase {
       telefono: '+593991234567',
       experiencia: 'Especialista en cachorros y perros senior.',
       calificacion: 4.8,
-      fotoUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9',
+      fotoUrl: 'https://reqres.in/img/faces/2-image.jpg', // URL Directa
       especialidades: ['Cachorros', 'Paseos Lentos / Senior'],
     ),
     Paseador(
@@ -30,7 +30,7 @@ class PaseosDatosBase {
       telefono: '+593988887766',
       experiencia: 'Paseador certificado y paramédico veterinario.',
       calificacion: 5.0,
-      fotoUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d',
+      fotoUrl: 'https://reqres.in/img/faces/3-image.jpg', // URL Directa
       especialidades: ['Primeros Auxilios', 'Paseos Grupales'],
     ),
     Paseador(
@@ -40,7 +40,7 @@ class PaseosDatosBase {
       telefono: '+593976543210',
       experiencia: 'Apasionada por los animales y comportamiento canino.',
       calificacion: 4.7,
-      fotoUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
+      fotoUrl: 'https://reqres.in/img/faces/4-image.jpg', // URL Directa
       especialidades: ['Socialización', 'Razas Medianas'],
     ),
   ];

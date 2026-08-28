@@ -1,19 +1,19 @@
+import 'paseador_model.dart';
+
 class Paseo {
   final String id;
+  final Paseador paseador;
   final String nombreMascota;
-  final String nombrePaseador;
-  final DateTime fecha;
-  final int duracionMinutos;
-  final double total;
-  String estado; // 'Pendiente', 'En Curso', 'Completado'
+  final DateTime fechaHora;
+  final int duracionHoras;
+  final double costoTotal;
 
   Paseo({
     required this.id,
+    required this.paseador,
     required this.nombreMascota,
-    required this.nombrePaseador,
-    required this.fecha,
-    required this.duracionMinutos,
-    required this.total,
-    this.estado = 'Pendiente',
+    required this.fechaHora,
+    required this.duracionHoras,
+    required this.costoTotal,
   });
 }
