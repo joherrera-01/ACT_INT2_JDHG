@@ -1,7 +1,7 @@
 # ACT_INT1_JDHG
 # 🐾 PaseoCanino - Aplicación de Gestión de Paseos para Mascotas
 
-Aplicación móvil desarrollada en **Flutter** que permite a los dueños de mascotas solicitar paseos de forma rápida y sencilla, interactuando con un estado dinámico en pantalla.
+Aplicación móvil esta desarrollada en **Flutter** la misma que permite a los dueños de mascotas solicitar paseos de forma rápida y sencilla, interactuando con un estado dinámico en pantalla.Esta es una mejora de la misma aplicacion presentada en la Actividad Integradora 1.
 
 ## 📌 Descripción del Proyecto
 
