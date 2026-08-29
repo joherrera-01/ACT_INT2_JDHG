@@ -9,19 +9,19 @@ Para esta entrega se continuó con el desarrollo de la aplicación de la Activid
 
 ## ⚡ Descripción de las nuevas funcionalidades implementadas.
 
-Navegación Multipantalla: Transición fluida entre cuatro vistas principales del sistema.
+* **`Navegación Multipantalla:`** Transición fluida entre cuatro vistas principales del sistema.
 
-Sistema de Filtro por Favoritos: Capacidad de marcar/desmarcar paseadores preferidos y filtrar la lista en tiempo real.
+* **`Sistema de Filtro por Favoritos::`**  Capacidad de marcar/desmarcar paseadores preferidos y filtrar la lista en tiempo real.
 
-Perfil de Paseador Ampliado: Visualización de detalles, biografía, áreas de especialidad y fotografía circular.
+* **`Perfil de Paseador Ampliado:`**  Visualización de detalles, biografía, áreas de especialidad y fotografía circular.
 
-Integración de Llamadas Nativas: Lanzamiento de la app de teléfono del dispositivo al presionar el botón de contacto.
+* **`Integración de Llamadas Telefónicas:`**  Lanzamiento de la app de teléfono del dispositivo al presionar el botón de contacto.
 
-Formulario Modal de Reserva: Ventana emergente (ModalBottomSheet) para elegir nombre de la mascota, fecha, hora y duración del servicio.
+* **`Formulario Modal de Reserva:`** Ventana emergente (ModalBottomSheet) para elegir nombre de la mascota, fecha, hora y duración del servicio.
 
-Cálculo de Tarifas Automático: Recálculo en tiempo real del costo total en función del tiempo de paseo seleccionado.
+* **`Cálculo de Tarifas Automático:`** Recálculo en tiempo real del costo total en función del tiempo de paseo seleccionado.
 
-Historial de Reservas Activas: Registro visual de los paseos agendados con opción de consulta detallada.
+* **`Historial de Reservas Activas::`**  Registro visual de los paseos agendados con opción de consulta detallada.
 
 BUSCAR PASEADORES
 
