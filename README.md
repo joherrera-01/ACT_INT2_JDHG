@@ -63,21 +63,21 @@ Confirmacion de Seleccion de Paseador
 ![alt text](image-7.png)
 ## 📌	Widgets nuevos utilizados en el proyecto.
 
-ListView.builder: Renderizado eficiente de listas dinámicas (catálogo de paseadores e historial).
+* `ListView.builder:` Renderizado eficiente de listas dinámicas (catálogo de paseadores e historial).
 
-GridView.count: Organización en cuadrícula para las opciones de menú en el Home.
+* `GridView.count:` Organización en cuadrícula para las opciones de menú en el Home.
 
-ListTile: Maquetación estándar de filas con avatar, título, subtítulo y elementos finales (trailing).
+* `ListTile:` Maquetación estándar de filas con avatar, título, subtítulo y elementos finales (trailing).
 
-CircleAvatar / ClipRRect: Modelado circular para las fotos de perfil de los paseadores y el isotipo de la app.
+* `CircleAvatar / ClipRRect:` Modelado circular para las fotos de perfil de los paseadores y el isotipo de la app.
 
-Image.network: Carga de imágenes remotas con control de estado de carga y soporte de error.
+* `Image.network:` Carga de imágenes remotas con control de estado de carga y soporte de error.
 
-Divider: Separadores de línea para organizar secciones visuales.
+* `Divider:` Separadores de línea para organizar secciones visuales.
 
-Chip / ChoiceChip: Etiquetas visuales para mostrar especialidades y botones de selección de horario.
+* `Chip / ChoiceChip:` Etiquetas visuales para mostrar especialidades y botones de selección de horario.
 
-OutlinedButton: Botón con borde para acciones secundarias como llamadas telefónicas.
+* `OutlinedButton:` Botón con borde para acciones secundarias como llamadas telefónicas.
 
 ## 📌   Descripción de las interacciones implementadas.
 
