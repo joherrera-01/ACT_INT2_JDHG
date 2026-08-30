@@ -5,35 +5,23 @@ PaseoCanino es una aplicación móvil desarrollada en Flutter orientada a la ges
 
 ## 📌 Indicar si continuó la aplicación de la Actividad Integradora 1 o desarrolló una nueva.
 
-Para esta entrega se continuó con el desarrollo de la aplicación de la Actividad Integradora 1. Se realizó una refactorización integral del código inicial (reestructurando la arquitectura monolítica hacia un patrón modular limpio) e integrando nuevas pantallas, modelos de datos, componentes interactivos y servicios externos.
+Para esta entrega se continuó con el desarrollo de la aplicación entregada en la Actividad Integradora 1. Se realizó una reestructuracion de la arquitectura usando un patrón modular y se integro nuevas pantallas, modelos de datos, componentes interactivos y servicios externos.
 
 ## ⚡ Descripción de las nuevas funcionalidades implementadas.
 
 * **`Navegación Multipantalla:`** Transición fluida entre cuatro vistas principales del sistema.
 
-* **`Sistema de Filtro por Favoritos::`**  Capacidad de marcar/desmarcar paseadores preferidos y filtrar la lista en tiempo real.
+* **`Sistema de Filtro por Favoritos::`**  Capacidad de marcar/desmarcar paseadores preferidos y filtrar la lista de paseadores en tiempo real.
 
 * **`Perfil de Paseador Ampliado:`**  Visualización de detalles, biografía, áreas de especialidad y fotografía circular.
 
-* **`Integración de Llamadas Telefónicas:`**  Lanzamiento de la app de teléfono del dispositivo al presionar el botón de contacto.
+* **`Integración de Llamadas Telefónicas:`**  Permitiendo contacto por teléfono desde el dispositivo directamente con el paseador.
 
-* **`Formulario Modal de Reserva:`** Ventana emergente (ModalBottomSheet) para elegir nombre de la mascota, fecha, hora y duración del servicio.
+* **`Formulario Modal de Reserva:`**  Ventana emergente (ModalBottomSheet) para elegir nombre de la mascota, fecha, hora y duración del servicio.
 
-* **`Cálculo de Tarifas Automático:`** Recálculo en tiempo real del costo total en función del tiempo de paseo seleccionado.
+* **`Cálculo de Tarifas Automático:`**  Cálculo en tiempo real del costo total en función del tiempo de paseo seleccionado.
 
 * **`Historial de Reservas Activas::`**  Registro visual de los paseos agendados con opción de consulta detallada.
-
-BUSCAR PASEADORES
-
-![alt text](image-1.png)
-
-RESERVA DE PASEADOR
-
-![alt text](image-11.png)
-
-ESTADISTICAS DE PASEOS
-
-![alt text](image-5.png)
 
 ## 📌 Listado de las cuatro pantallas desarrolladas y su función
 
@@ -42,25 +30,6 @@ ESTADISTICAS DE PASEOS
 * **`DetallePaseadorScreen` (`lib/screens/detalle_paseador_screen.dart`):** Vista de perfil individual con experiencia, especialidades, botón de llamada telefónica y modal flotante para configurar la reserva.
 * **`MisPaseosScreen` (`lib/screens/mis_paseos_screen.dart`):** Pantalla de historial que muestra las reservas generadas con su costo total, mascota, fecha y foto del paseador asignado.
 
-PANTALLA 1
-Buscar Paseadores:
-![alt text](image-2.png)
-
-PANTALLA 2
-Seleccion del Paseador
-![alt text](image-6.png)
-
-PANTALLA 3
-Historial de Paseos
-![alt text](image-4.png)
-
-![alt text](image-8.png)
-
-PANTALLA 4
-
-Confirmacion de Seleccion de Paseador
-
-![alt text](image-7.png)
 ## 📌	Widgets nuevos utilizados en el proyecto.
 
 * `ListView.builder:` Renderizado eficiente de listas dinámicas (catálogo de paseadores e historial).
@@ -116,15 +85,15 @@ Colores Personalizados: Paleta gráfica basada en Colors.deepOrange como tono pr
 ## 📌   Capturas de pantalla de las principales pantallas de la aplicación.
 ## 📌   Instrucciones básicas para ejecutar el proyecto.
 
-Para clonar y ejecutar el repositorio ([https://github.com/joherrera-01/ACT_INT2_JDHG.git](https://github.com/joherrera-01/ACT_INT2_JDHG.git)) en Windows y macOS, seguir las instrucciones específicas para cada sistema operativo.
+Para clonar y ejecutar el repositorio https://github.com/joherrera-01/ACT_INT2_JDHG.git en Windows y macOS, debe seguir las siguientes instrucciones para cada sistema operativo.
 
 Prerrequisitos Comunes
 
-Tener instalado Git.
+ - Tener instalado Git.
 
-Tener instalado el SDK de Flutter (versión 3.x o superior) configurado en el PATH del sistema.
+ - Tener instalado el SDK de Flutter (versión 3.x o superior) configurado en el PATH del sistema.
 
-VS Code o Android Studio instalado con los complementos/plugins de Flutter y Dart.
+ - VS Code o Android Studio instalado con los complementos/plugins de Flutter y Dart.
 
 ## 📌   Ejecución en Windows
 
