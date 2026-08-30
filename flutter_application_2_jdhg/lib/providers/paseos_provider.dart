@@ -30,17 +30,17 @@ class PaseosDatosBase {
       telefono: '+593988887766',
       experiencia: 'Paseador certificado y paramédico veterinario.',
       calificacion: 5.0,
-      fotoUrl: 'https://reqres.in/img/faces/3-image.jpg', // URL Directa
+      fotoUrl: 'https://reqres.in/img/faces/6-image.jpg', // URL Directa
       especialidades: ['Primeros Auxilios', 'Paseos Grupales'],
     ),
     Paseador(
       id: '4',
-      nombre: 'Andrea Gómez',
+      nombre: 'Andres Gómez',
       precioPorHora: 14.00,
       telefono: '+593976543210',
       experiencia: 'Apasionada por los animales y comportamiento canino.',
       calificacion: 4.7,
-      fotoUrl: 'https://reqres.in/img/faces/4-image.jpg', // URL Directa
+      fotoUrl: 'https://reqres.in/img/faces/9-image.jpg', // URL Directa
       especialidades: ['Socialización', 'Razas Medianas'],
     ),
   ];

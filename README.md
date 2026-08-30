@@ -83,6 +83,23 @@ Nombre de la App: PaseoCanino (configurado en title de MaterialApp y en la barra
 Colores Personalizados: Paleta gráfica basada en Colors.deepOrange como tono primario de marca, combinado con Colors.teal para acentos del historial y tonos neutros de fondo (grey.shade50).
 
 ## 📌   Capturas de pantalla de las principales pantallas de la aplicación.
+
+MENU PRINCIPAL
+![alt text](image.png)
+
+BUSCAR PASEADORES
+![alt text](image-1.png)
+
+SELECCIONAR PASEADOR
+![alt text](image-2.png)
+
+RESERVA PASEADOR
+![alt text](image-3.png)
+
+PASEO RESERVADO
+![alt text](image-4.png)
+
+
 ## 📌   Instrucciones básicas para ejecutar el proyecto.
 
 Para clonar y ejecutar el repositorio https://github.com/joherrera-01/ACT_INT2_JDHG.git en Windows y macOS, debe seguir las siguientes instrucciones para cada sistema operativo.
