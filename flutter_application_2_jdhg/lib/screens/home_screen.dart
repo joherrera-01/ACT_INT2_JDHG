@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../providers/paseos_provider.dart';
 import 'paseadores_screen.dart';
 import 'mis_paseos_screen.dart';
+import '../widgets/app_logo.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -35,67 +36,47 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // ---------------------------------------------------------------
-            // 1. BANNER PRINCIPAL / HEADER CON GRADIENTE Y LOGOTIPO
-            // ---------------------------------------------------------------
-            Container(
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Colors.deepOrange, Colors.orangeAccent],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(30),
-                ),
-              ),
-              padding: const EdgeInsets.fromLTRB(20, 10, 20, 30),
-              child: Column(
-                children: [
-                  // Logotipo / Imagen Representativa
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.15),
-                          blurRadius: 10,
-                          offset: const Offset(0, 5),
-                        ),
-                      ],
-                    ),
-                    child: const Icon(
-                      Icons.pets_rounded,
-                      size: 55,
-                      color: Colors.deepOrange,
-                    ),
-                  ),
-                  const SizedBox(height: 15),
-                  Text(
-                    '¡Hola, Bienvenid@!',
-                    style: GoogleFonts.poppins(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                  Text(
-                    'El mejor cuidado para tu mejor amigo',
-                    style: GoogleFonts.roboto(
-                      fontSize: 14,
-                      color: Colors.white.withValues(alpha: 0.9),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 20),
+          // ---------------------------------------------------------------
+// BANNER PRINCIPAL / HEADER CON EL NUEVO LOGOTIPO REPRESENTATIVO
+// ---------------------------------------------------------------
+Container(
+  width: double.infinity,
+  decoration: const BoxDecoration(
+    gradient: LinearGradient(
+      colors: [Colors.deepOrange, Colors.orangeAccent],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+    ),
+    borderRadius: BorderRadius.only(
+      bottomLeft: Radius.circular(30),
+      bottomRight: Radius.circular(30),
+    ),
+  ),
+  padding: const EdgeInsets.fromLTRB(20, 10, 20, 30),
+  child: Column(
+    children: [
+      // LOGOTIPO REPRESENTATIVO DE LA APLICACIÓN
+      const AppLogo(size: 85),
+      const SizedBox(height: 15),
+      Text(
+        '¡Hola, Bienvenid@!',
+        style: GoogleFonts.poppins(
+          fontSize: 22,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      ),
+      const SizedBox(height: 5),
+      Text(
+        'El mejor cuidado para tu mejor amigo',
+        style: GoogleFonts.roboto(
+          fontSize: 14,
+          color: Colors.white.withValues(alpha: 0.9),
+        ),
+      ),
+    ],
+  ),
+),
 
             // ---------------------------------------------------------------
             // 2. TARJETAS DE MÉTRICAS / ESTADÍSTICAS RÁPIDAS
