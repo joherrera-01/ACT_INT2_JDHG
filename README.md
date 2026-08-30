@@ -85,19 +85,32 @@ Colores Personalizados: Paleta gráfica basada en Colors.deepOrange como tono pr
 ## 📌   Capturas de pantalla de las principales pantallas de la aplicación.
 
 MENU PRINCIPAL
+
 ![alt text](image.png)
 
-BUSCAR PASEADORES
+BUSCAR PASEADOR
+
 ![alt text](image-1.png)
 
 SELECCIONAR PASEADOR
+
 ![alt text](image-2.png)
 
 RESERVA PASEADOR
+
 ![alt text](image-3.png)
 
 PASEO RESERVADO
+
 ![alt text](image-4.png)
+
+LISTAS PASEOS RESERVADOS
+
+![alt text](image-5.png)
+
+CANCELAR RESERVA
+
+![alt text](image-6.png)
 
 
 ## 📌   Instrucciones básicas para ejecutar el proyecto.

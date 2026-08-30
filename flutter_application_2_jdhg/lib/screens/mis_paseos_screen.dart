@@ -10,6 +10,67 @@ class MisPaseosScreen extends StatefulWidget {
 }
 
 class _MisPaseosScreenState extends State<MisPaseosScreen> {
+  // Función para confirmar y cancelar la reserva
+  void _confirmarEliminacion(int index) {
+    final paseo = PaseosDatosBase.misPaseos[index];
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
+          title: Text(
+            'Cancelar Reserva',
+            style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+          ),
+          content: Text(
+            '¿Estás seguro de que deseas cancelar la reserva del paseo para ${paseo.nombreMascota} con ${paseo.paseador.nombre}?',
+            style: GoogleFonts.poppins(fontSize: 14),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text(
+                'No, conservar',
+                style: TextStyle(color: Colors.grey.shade700),
+              ),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              onPressed: () {
+                setState(() {
+                  PaseosDatosBase.misPaseos.removeAt(index);
+                });
+                Navigator.of(context).pop();
+
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Reserva cancelada correctamente 🐾'),
+                    backgroundColor: Colors.redAccent,
+                  ),
+                );
+              },
+              child: Text(
+                'Sí, cancelar',
+                style: GoogleFonts.poppins(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final paseos = PaseosDatosBase.misPaseos;
@@ -60,7 +121,6 @@ class _MisPaseosScreenState extends State<MisPaseosScreen> {
                   ),
                   child: ListTile(
                     contentPadding: const EdgeInsets.all(12),
-                    // FOTO REDONDA DEL PASEADOR EN EL HISTORIAL
                     leading: ClipRRect(
                       borderRadius: BorderRadius.circular(25),
                       child: Container(
@@ -105,6 +165,15 @@ class _MisPaseosScreenState extends State<MisPaseosScreen> {
                           ),
                         ),
                       ],
+                    ),
+                    // BOTÓN PARA CANCELAR / ELIMINAR LA RESERVA
+                    trailing: IconButton(
+                      icon: const Icon(
+                        Icons.delete_outline,
+                        color: Colors.redAccent,
+                      ),
+                      tooltip: 'Cancelar Reserva',
+                      onPressed: () => _confirmarEliminacion(index),
                     ),
                   ),
                 );
