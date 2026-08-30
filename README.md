@@ -112,6 +112,13 @@ CANCELAR RESERVA
 
 ![alt text](image-6.png)
 
+LLAMADA AL PASEADOR
+
+![alt text](image-8.png)
+
+AGREGAR FAVORITOS
+
+![alt text](image-9.png)
 
 ## 📌   Instrucciones básicas para ejecutar el proyecto.
 
