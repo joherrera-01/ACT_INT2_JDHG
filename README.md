@@ -86,7 +86,7 @@ Colores Personalizados: Paleta gráfica basada en Colors.deepOrange como tono pr
 
 MENU PRINCIPAL
 
-![alt text](image.png)
+![alt text](image-7.png)
 
 BUSCAR PASEADOR
 
