@@ -15,23 +15,35 @@ class DetallePaseadorScreen extends StatefulWidget {
 }
 
 class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
-  // Función para realizar llamadas telefónicas
+  // Función optimizada para realizar llamadas usando el paquete url_launcher
   Future<void> _abrirContacto(String telefono) async {
-    final Uri url = Uri.parse('tel:$telefono');
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url);
-    } else {
+    final String numeroLimpio = telefono.replaceAll(RegExp(r'[\s\-]+'), '');
+    final Uri url = Uri(scheme: 'tel', path: numeroLimpio);
+
+    try {
+      if (await canLaunchUrl(url)) {
+        await launchUrl(
+          url,
+          mode: LaunchMode.externalApplication,
+        );
+      } else {
+        await launchUrl(url, mode: LaunchMode.externalApplication);
+      }
+    } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('No se pudo abrir la aplicación de llamadas.'),
+            content: Text(
+              'No hay una aplicación de llamadas disponible en este dispositivo.',
+            ),
+            backgroundColor: Colors.redAccent,
           ),
         );
       }
     }
   }
 
-  // Modal para solicitar el paseo con la foto del paseador integrada
+  // Modal para solicitar el paseo con foto del paseador e incremento dinámico
   void _mostrarModalSolicitarPaseo() {
     final nombreMascotaController = TextEditingController();
     DateTime fechaSeleccionada = DateTime.now();
@@ -47,7 +59,8 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
       builder: (context) {
         return StatefulBuilder(
           builder: (BuildContext context, StateSetter setModalState) {
-            final double totalPagar = widget.paseador.precioPorHora * duracionHoras;
+            final double totalPagar =
+                widget.paseador.precioPorHora * duracionHoras;
 
             return Padding(
               padding: EdgeInsets.only(
@@ -72,8 +85,8 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
                       ),
                     ),
                     const SizedBox(height: 15),
-                    
-                    // HEADER DEL MODAL CON LA FOTO REDONDA DEL PASEADOR
+
+                    // Encabezado del Modal con Foto Redonda
                     Row(
                       children: [
                         ClipRRect(
@@ -125,12 +138,15 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
                     ),
                     const Divider(height: 25),
 
-                    // Campo: Nombre de la mascota
+                    // Campo de Nombre de la Mascota
                     TextField(
                       controller: nombreMascotaController,
                       decoration: InputDecoration(
                         labelText: 'Nombre de tu mascota',
-                        prefixIcon: const Icon(Icons.pets, color: Colors.deepOrange),
+                        prefixIcon: const Icon(
+                          Icons.pets,
+                          color: Colors.deepOrange,
+                        ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
@@ -152,7 +168,9 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
                                 context: context,
                                 initialDate: fechaSeleccionada,
                                 firstDate: DateTime.now(),
-                                lastDate: DateTime.now().add(const Duration(days: 30)),
+                                lastDate: DateTime.now().add(
+                                  const Duration(days: 30),
+                                ),
                               );
                               if (picked != null) {
                                 setModalState(() => fechaSeleccionada = picked);
@@ -180,13 +198,15 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
                     ),
                     const SizedBox(height: 15),
 
-                    // Selector de Duración
+                    // Control de Duración (Horas)
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Duración:',
-                          style: GoogleFonts.poppins(fontWeight: FontWeight.w600),
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                         Row(
                           children: [
@@ -205,7 +225,8 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
                             ),
                             IconButton(
                               icon: const Icon(Icons.add_circle_outline),
-                              onPressed: () => setModalState(() => duracionHoras++),
+                              onPressed: () =>
+                                  setModalState(() => duracionHoras++),
                             ),
                           ],
                         ),
@@ -213,7 +234,7 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
                     ),
                     const SizedBox(height: 15),
 
-                    // Resumen del Total
+                    // Resumen del Costo Total
                     Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
@@ -225,7 +246,9 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
                         children: [
                           Text(
                             'Total a Pagar:',
-                            style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+                            style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           Text(
                             '\$${totalPagar.toStringAsFixed(2)}',
@@ -240,7 +263,7 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
                     ),
                     const SizedBox(height: 20),
 
-                    // Botón de Confirmación
+                    // Botón para Confirmar la Reserva
                     SizedBox(
                       width: double.infinity,
                       height: 50,
@@ -255,7 +278,9 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
                           if (nombreMascotaController.text.trim().isEmpty) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
-                                content: Text('Por favor ingresa el nombre de tu mascota.'),
+                                content: Text(
+                                  'Por favor ingresa el nombre de tu mascota.',
+                                ),
                               ),
                             );
                             return;
@@ -270,7 +295,9 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
                           );
 
                           final nuevoPaseo = Paseo(
-                            id: DateTime.now().millisecondsSinceEpoch.toString(),
+                            id: DateTime.now()
+                                .millisecondsSinceEpoch
+                                .toString(),
                             paseador: widget.paseador,
                             nombreMascota: nombreMascotaController.text.trim(),
                             fechaHora: fechaFinal,
@@ -323,10 +350,10 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            // FOTO PRINCIPAL REDONDA DEL PASEADOR (VENTANA DE DETALLES)
+            // Foto Principal Redonda del Paseador
             Center(
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(60), // Redondo amplio
+                borderRadius: BorderRadius.circular(60),
                 child: Container(
                   width: 110,
                   height: 110,
@@ -353,7 +380,10 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
             const SizedBox(height: 15),
             Text(
               widget.paseador.nombre,
-              style: GoogleFonts.poppins(fontSize: 22, fontWeight: FontWeight.bold),
+              style: GoogleFonts.poppins(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             const SizedBox(height: 5),
             Row(
@@ -372,7 +402,7 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
             ),
             const SizedBox(height: 20),
 
-            // Tarjeta de Información
+            // Tarjeta de Información Completa
             Card(
               elevation: 2,
               shape: RoundedRectangleBorder(
@@ -428,7 +458,8 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
                             (esp) => Chip(
                               label: Text(esp),
                               backgroundColor: Colors.deepOrange.shade50,
-                              labelStyle: const TextStyle(color: Colors.deepOrange),
+                              labelStyle:
+                                  const TextStyle(color: Colors.deepOrange),
                             ),
                           )
                           .toList(),
@@ -439,7 +470,7 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
             ),
             const SizedBox(height: 25),
 
-            // Botón Contactar / Llamar
+            // Botón Contactar / Llamar Nativamente
             OutlinedButton.icon(
               style: OutlinedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 50),
@@ -460,7 +491,7 @@ class _DetallePaseadorScreenState extends State<DetallePaseadorScreen> {
             ),
             const SizedBox(height: 12),
 
-            // Botón Solicitar Paseo
+            // Botón Desplegar Modal de Reserva
             ElevatedButton.icon(
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 50),
