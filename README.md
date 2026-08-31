@@ -187,9 +187,3 @@ En Simulador de iOS (iPhone):
 Abrir el simulador de iOS ejecutar en un emulador
 
 
-
-Solución a Problemas Frecuentes al Ejecutar
-
--Las fotos no cargan en la Web: Asegúrarse de incluir la bandera --web-renderer html al final del comando flutter run -d chrome.
-
--Error de caché o dependencias antiguas: Ejecutar flutter clean seguido de flutter pub get antes de volver a ejecutar la aplicación.
