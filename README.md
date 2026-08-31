@@ -154,14 +154,11 @@ flutter doctor
 En Navegador Web (Chrome) - Recomendado para evitar problemas CORS:
 
 flutter run -d chrome --web-renderer html
+
 En Emulador de Android:
 
-Abrir Android Studio y ejecuta un emulador desde el AVD Manager.
+Abrir Android Studio y ejecutar un emulador desde el AVD Manager.
 
-flutter run
-En Aplicación Nativa de Windows:
-
-flutter run -d windows
 
 ## 📌   Ejecución en macOS
 
@@ -184,22 +181,15 @@ Si va a probar el paquete url_launcher para llamadas en un simulador iOS o macOS
 En Navegador Web (Chrome / Safari):
 
 flutter run -d chrome --web-renderer html
+
 En Simulador de iOS (iPhone):
 
-Abrir el simulador de iOS ejecutando en la terminal:
+Abrir el simulador de iOS ejecutar en un emulador
 
-open -a Simulator
 
-Ejecurar la aplicación:
-
-flutter run
-
-En Aplicación Nativa de macOS:
-
-flutter run -d macos
 
 Solución a Problemas Frecuentes al Ejecutar
 
 -Las fotos no cargan en la Web: Asegúrarse de incluir la bandera --web-renderer html al final del comando flutter run -d chrome.
 
--Error de caché o dependencias antiguas: Ejecuta flutter clean seguido de flutter pub get antes de volver a lanzar la aplicación.
+-Error de caché o dependencias antiguas: Ejecutar flutter clean seguido de flutter pub get antes de volver a ejecutar la aplicación.
